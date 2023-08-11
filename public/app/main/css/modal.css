@@ -1,0 +1,671 @@
+.bg-modal {
+    position: fixed;
+    top: -250%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    z-index: 98;
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.bg-modal.show-modal {
+    top: 0;
+    transition: .5s;
+}
+
+/* modal tambah update */
+.modal-add {
+    position: relative;
+    margin: auto;
+    width: 90%;
+    opacity: 1;
+    background-color: white;
+    z-index: 99;
+    height: 340px;
+    border-radius: 10px;   
+    padding: 0 0 10px; 
+    /* overflow: hidden; */
+    box-shadow: 0px 10px 5px rgba(0,0,0,.2);
+    
+}
+
+
+.modal-update {
+    position: relative;
+    margin: auto;
+    width: 90%;
+    opacity: 1;
+    background-color: white;
+    z-index: 99;
+    height: 340px;
+    border-radius: 10px;   
+    padding: 0 0 10px; 
+    /* overflow: hidden; */
+    box-shadow: 0px 10px 5px rgba(0,0,0,.2);
+    
+}
+
+.modal-info {
+    position: relative;
+    margin: auto;
+    width: 300px;
+    height: 150px;
+    opacity: 1;
+    background-color: white;
+    z-index: 99;
+    border-radius: 10px;   
+    padding: 0 0 10px; 
+    /* overflow: hidden; */
+    box-shadow: 0px 10px 5px rgba(0,0,0,.2);
+    
+}
+
+.close-modal {
+    width: 25px;
+    font-weight: bold;
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    padding: 7px;
+    background-color: white;
+    color: #2F2E41;
+    cursor: pointer;
+    border-radius: 30px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+}
+
+.h3-modal{
+
+    color: #2F2E41;
+    text-align: center;
+    padding: 60px 10px 5px 10px;
+    font-weight: bold;
+    font-size: 1.5em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0;
+    
+}
+
+.form-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 10px 10px;
+    
+}
+
+.input-modal {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    width: 90%;
+}
+
+.input-modal span {
+    font-weight: bold;
+    color: #2F2E41;
+}
+
+.input-modal input {
+    padding: 8px;
+    margin-top: 8px;
+    outline: none;
+    border: 2px solid #9E9E9E;
+    border-radius: 5px;
+    -webkit-transition: .4s;
+       -moz-transition: .4s;
+        -ms-transition: .4s;
+         -o-transition: .4s;
+            transition: .4s;
+}
+
+.input-modal input:focus {
+    -webkit-transition: .4s;
+       -moz-transition: .4s;
+        -ms-transition: .4s;
+         -o-transition: .4s;
+            transition: .4s;
+    border: 2px solid #2F2E41;
+}
+
+.input-modal textarea {
+    height: 100px;
+    outline: none;
+    padding: 8px;
+    margin-top: 8px;
+    border: 2px solid #9E9E9E;
+    border-radius: 5px;
+    -webkit-transition: .4s;
+       -moz-transition: .4s;
+        -ms-transition: .4s;
+         -o-transition: .4s;
+            transition: .4s;
+}
+
+.input-modal textarea:focus {
+    -webkit-transition: .4s;
+       -moz-transition: .4s;
+        -ms-transition: .4s;
+         -o-transition: .4s;
+            transition: .4s;
+    border: 2px solid #2F2E41;
+}
+
+
+.select-modal  {
+   width: 90%;
+   display: flex;
+   margin-top: 10px;
+   justify-content: center;
+   align-items: center;
+}
+
+.select-modal select {
+    margin: 10px 10px 5px;
+    border-radius: 5px;
+    padding: 8px;
+    width: 150px;
+    outline: none;
+    border: 2px solid #9E9E9E;
+    color: #2F2E41;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-transition: .4s;
+       -moz-transition: .4s;
+        -ms-transition: .4s;
+         -o-transition: .4s;
+            transition: .4s;
+}
+
+.select-modal select:focus {
+    -webkit-transition: .4s;
+       -moz-transition: .4s;
+        -ms-transition: .4s;
+         -o-transition: .4s;
+            transition: .4s;
+    border: 2px solid #2F2E41;
+}
+
+.btn-submit {
+
+    border: none;
+    outline: none;
+    margin: 0 10px 0 10px;
+    width: 250px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #2F2E41;
+    color: white;
+    font-size: .9em;
+    font-weight: bold;
+    transition: .3s;
+    transform: translateY(0);
+}
+.btn-submit:hover {
+    transition: .3s;
+    transform: translateY(-2px);
+}
+
+
+.btn-close {
+    border: none;
+    outline: none;
+    width: 130px;
+    height: 48px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid #2F2E41;
+    color: #2F2E41;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .9em;
+    font-weight: bold;
+    transition: .3s;
+    transform: translateY(0);
+}
+
+.btn-close:hover {
+    transition: .3s;
+    transform: translateY(-2px);
+}
+
+.button-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+
+}
+
+/* delete guru */
+
+.modal-delete {
+    position: relative;
+    margin: auto;
+    width: 90%;
+    opacity: 1;
+    background-color: white;
+    z-index: 99;
+    height: 310px;
+    border-radius: 10px;   
+    padding: 3px; 
+    /* overflow: hidden; */
+    box-shadow: 0px 10px 5px rgba(0,0,0,.2);
+    
+}
+
+.modal-icon {
+    padding: 10px;
+    background-color: white;
+    border-radius: 1000px;
+    position: absolute;
+    
+    top: 0;
+    left:50%;
+    -webkit-transform: translate(-50%,-50%);
+       -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+         -o-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    z-index: 2;
+}
+
+.modal-icon svg {
+    width: 65px;
+    height: 65px;
+    color: #FD4949;
+}
+
+.h3-delete {
+    font-size: 1.5em;
+    padding-top: 65px;
+    padding-left: 30px;
+    font-weight: 550;
+}
+
+.p-delete {
+    padding-top: 15px;
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    font-size: 1em;
+}
+    
+.cancel-delete {
+     width: 130px;
+    height: 48px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #0FA243;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 550; 
+    -webkit-transition: .5s;
+        -moz-transition: .5s;
+         -ms-transition: .5s;
+          -o-transition: .5s;
+             transition: .5s; 
+}
+
+.cancel-delete:hover {
+    background-color: #079238;
+     -webkit-transition: .5s;
+        -moz-transition: .5s;
+         -ms-transition: .5s;
+          -o-transition: .5s;
+             transition: .5s; 
+}
+
+.btn-delete {
+    width: 130px;
+    height: 48px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #FF3F3F;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-weight: 550;
+    color: white;
+        -webkit-transition: .5s;
+        -moz-transition: .5s;
+         -ms-transition: .5s;
+          -o-transition: .5s;
+             transition: .5s; 
+}
+
+.btn-delete:hover {
+    background-color: #FF2B2B;
+     -webkit-transition: .5s;
+        -moz-transition: .5s;
+         -ms-transition: .5s;
+          -o-transition: .5s;
+             transition: .5s; 
+}
+
+
+/* modal tambah ubah siswa */
+.tambah-siswa {
+    height: 400px;
+}
+
+/* modal tambah ubah poin */
+.tambah-poin {
+    height: 425px;
+}
+
+/* modal pengaduan siswa */
+
+.bg-modal-pengaduan {
+    position: absolute;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 70px;
+
+}
+
+.modal-pengaduan {
+    border-radius: 0;
+    padding: 10px;
+    height: 600px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.close-pengaduan {
+    top: 10px;
+    right: 10px;
+}
+.btn-search-modal {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+
+.btn-search-modal form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.input-pengaduan {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    width: 60%;
+}
+.error-pengaduan {
+    color: white;
+    margin: 10px 0;
+    font-size: .9em;
+    background-color: rgb(248, 52, 52);
+
+    border-radius: 5px;
+    padding: 5px 12px;
+    text-align: center;
+}
+
+.btn-search-modal input {
+    padding: 8px;
+    margin-top: 8px;
+    outline: none;
+   
+    border: 2px solid #9E9E9E;
+    border-radius: 5px;
+    -webkit-transition: .4s;
+       -moz-transition: .4s;
+        -ms-transition: .4s;
+         -o-transition: .4s;
+            transition: .4s;
+}
+
+.btn-search-modal input:focus {
+    -webkit-transition: .4s;
+       -moz-transition: .4s;
+        -ms-transition: .4s;
+         -o-transition: .4s;
+            transition: .4s;
+    border: 2px solid #2F2E41;
+}
+
+.btn-search-modal button {
+    width: 25%;
+    transform: translateY(5px);
+    height: 34px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 5px;
+    background-color: #464553;
+    color: white;
+    font-weight: 550;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-search-modal button:hover {
+    background-color: #2F2E41;
+    transition: .2s;
+}
+
+.btn-pilih-pengaduan {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.btn-pilih-pengaduan svg {
+    width: 31px;
+    color: #1e996a;
+    cursor: pointer;
+}
+
+
+.table-modal {
+ overflow-x: auto;
+}
+
+/* modal kelas */
+.modal-kelas {
+    height: 275px;
+}
+
+/* modal info */
+.content-infoipoin {
+    position: relative;
+    top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content-infoipoin h3 {
+    font-size: 1.3em;
+    padding-bottom: 10px;
+}
+
+/* poin siswa */
+.table-modal-poinsiswa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 55px;
+}
+
+.modal-poinsiswa {
+    height: 220px;
+}
+
+
+
+
+@media screen and (min-width:350px) {
+
+  /* add guru */
+
+      .modal-delete {
+        position: relative;
+        margin: auto 15px;
+        width: 350px;
+        height: 310px;
+        opacity: 1;
+        background-color: white;
+        z-index: 99;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        /* overflow: hidden; */
+        box-shadow: 0px 10px 5px rgba(0,0,0,.2);
+    }
+
+    .h3-delete {
+        font-size: 1.5em;
+        padding-top: 70px;
+        padding-left: 30px;
+        font-weight: 550;
+    }
+
+    .p-delete {
+        padding-top: 15px;
+        padding-left: 30px;
+        padding-right: 20px;
+        padding-bottom: 25px;
+        font-size: 1em;
+    }
+
+  
+}
+
+@media screen and (min-width:960px) {
+    /* modal guru */
+    .modal-add {
+        position: relative;
+        margin: auto;
+        width: 600px;
+        height: 355px;
+        opacity: 1;
+        background-color: white;
+        z-index: 99;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        /* overflow: hidden; */
+        box-shadow: 0px 10px 5px rgba(0,0,0,.2);
+    }    
+
+    .modal-update {
+        position: relative;
+        margin: auto;
+        width: 600px;
+        height: 355px;
+        opacity: 1;
+        background-color: white;
+        z-index: 99;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        /* overflow: hidden; */
+        box-shadow: 0px 10px 5px rgba(0,0,0,.2);
+    }
+
+
+    /*delete guru*/
+    .modal-delete {
+        position: relative;
+        margin: auto;
+        width: 450px;
+        height: 300px;
+        opacity: 1;
+        background-color: white;
+        z-index: 99;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        /* overflow: hidden; */
+        box-shadow: 0px 10px 5px rgba(0,0,0,.2);
+    }
+
+     .h3-delete {
+        font-size: 1.6em;
+        padding-top: 75px;
+        padding-left: 30px;
+        font-weight: 550;
+    }
+
+
+    /* modal tambah ubah siswa */
+    .tambah-siswa {
+        height: 405px;
+    }
+    /* modal tambah ubah poin */
+    .tambah-poin {
+        height: 425px;
+    }
+
+    .bg-modal-pengaduan {
+        position: fixed;
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 0;
+    }
+    
+
+    .modal-pengaduan {
+        width: 900px;
+        height: 600px;
+        padding: 10px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        border-radius: 0;
+    }
+
+    /* modal kelas */
+
+    .modal-kelas {
+        height: 275px;
+    }
+
+    .modal-info {
+        width: 300px;
+        height: 150px;
+        padding: 10px;
+    }
+
+    /* poin siswa */
+
+    .modal-poinsiswa {
+        height: 220px;
+    }
+
+
+
+
+
+
+
+
+
+
+}
